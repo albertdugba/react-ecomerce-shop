@@ -1,3 +1,11 @@
+* {
+  list-style: none;
+  text-decoration: none;
+}
+a {
+  color: teal;
+}
+
 nav {
   max-width: 700px;
   margin: auto;

@@ -24,6 +24,7 @@ const Flower = ({ title, price, img, alt }) => {
               <div className="card-footer">
                 <p>{title}</p>
                 <span>${parseFloat(price).toFixed(2)}</span>
+                <button>View ></button>
               </div>
             </div>
           );
@@ -40,19 +41,39 @@ const CardContainer = styled.div`
   background: #fff;
 
   .card-footer {
-    background: rgb(185, 230, 215);
-    color: grey;
+    color: #000;
     font-weight: bold;
     width: 250px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: -20px;
-    padding: 0;
+    flex-direction: column;
+    text-align: center;
 
     span {
       color: teal;
+      font-weight: bold;
     }
+  }
+
+  button {
+    margin-top: 15px;
+    width: 100px;
+    height: 35px;
+    font-weight: bold;
+    align-self: center;
+    background: #fff;
+    font-size: 1.125rem;
+    color: teal;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: all ease-out 0.3s;
+    border: 0.6px solid grey;
+  }
+
+  button:hover {
+    background: teal;
+    color: #fff;
+    border: 1px solid teal;
   }
 `;
 

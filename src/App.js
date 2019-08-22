@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Flowers from "./components/Flowers";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
+import ShowCase from "./components/ShowCase";
 
 class App extends Component {
   render() {
@@ -12,10 +13,12 @@ class App extends Component {
       <div>
         <Navbar />
         <Banner />
+
         <Switch>
-          <Route exact path="/" component={Flowers} />
-          <Route exact path="/footer" component={Footer} />
+          <Route exact path="/" component={ShowCase} />
+          <Route exact path="/store" component={Flowers} />
         </Switch>
+        <Footer />
       </div>
     );
   }

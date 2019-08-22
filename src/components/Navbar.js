@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { FaLeaf } from "react-icons/fa";
 
 import "../App.css";
@@ -9,11 +10,16 @@ class Navbar extends Component {
       <nav>
         <header>
           <h2 className="logo">
-            <FaLeaf style={{ color: "teal", fontSize: "1.9rem" }} />
+            <Link to="/">
+              <FaLeaf style={{ color: "teal", fontSize: "1.9rem" }} />
+            </Link>
           </h2>
 
           <ul>
-            <li>Shop</li>||
+            <li>
+              <Link to="/store">Store</Link>
+            </li>
+            ||
             <li>Cart</li>||
             <li>Login</li>
           </ul>
