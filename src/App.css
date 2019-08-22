@@ -4,14 +4,13 @@ nav {
   border-top: 1px solid grey;
   border-bottom: 1px solid grey;
   padding: 0;
-  margin-top: 2w0px;
+  margin-top: 20px;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 0.6rem; */
 }
 
 ul {
@@ -29,31 +28,36 @@ li {
 .card {
   margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 1.5rem;
-
-  /* display: none; */
+  grid-template-columns: repeat(4, 1fr);
+  padding-left: 30px;
 }
 
 .banner {
   position: relative;
-  background: teal;
+  background: rgba(0, 0, 0, 0.5);
   height: 70vh;
   width: 100%;
   text-align: center;
   justify-content: center;
   align-items: center;
   color: #fff;
-  opacity: 0.4;
+  opacity: 0.8;
+  display: flex;
+  margin-top: 20px;
 }
 
 .banner::before {
   content: "";
   position: absolute;
-  background: rgba(8, 8, 8, 0.5);
+  background: teal;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   z-index: -1;
+}
+
+/* Title */
+o {
+  background: rgb(185, 230, 215);
 }
