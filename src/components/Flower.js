@@ -10,17 +10,19 @@ const Flower = ({ title, price, img, alt }) => {
         {value => {
           return (
             <div>
-              <img
-                src={img}
-                alt={alt}
-                style={{
-                  width: "250px",
-                  height: "250px",
-                  margin: "0",
-                  padding: "0"
-                }}
-                className="card-img-container"
-              />
+              <Link to="/details">
+                <img
+                  src={img}
+                  alt={alt}
+                  style={{
+                    width: "250px",
+                    height: "250px",
+                    margin: "0",
+                    padding: "0"
+                  }}
+                  className="card-img-container"
+                />
+              </Link>
               <div className="card-footer">
                 <p>{title}</p>
                 <span>${parseFloat(price).toFixed(2)}</span>
