@@ -1,10 +1,19 @@
 import React from "react";
+import { FlowerConsumer } from "./Context";
 
 const Details = () => {
   return (
-    <div>
-      <h1>Flower Details Page</h1>
-    </div>
+    <FlowerConsumer>
+      {value => {
+        const { title, img, id, price } = value.flowerDetails;
+        return (
+          <div>
+            <h1>Flower Details Page</h1>
+            <p>{price}</p>
+          </div>
+        );
+      }}
+    </FlowerConsumer>
   );
 };
 

@@ -69,7 +69,8 @@ li {
   z-index: -1;
 }
 
-/* Title */
-o {
-  background: rgb(185, 230, 215);
+/* Container*/
+.container {
+  background: white;
+  padding: 1rem;
 }

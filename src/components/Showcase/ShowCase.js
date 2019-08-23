@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import Featured from "../Featured";
 import retail from "./online-retail.svg";
 import shipping from "./shipping.svg";
 import support from "./support.svg";
@@ -11,17 +12,17 @@ const ShowCase = () => {
     <section>
       <ShowCaseContainer className="showcase-container">
         <div className="showcase-area">
-          <img src={support} alt="" />
+          <img src={support} alt="full-customer-support-icon" />
           <h2>24/7 Customer Support</h2>
           <p>Call us any time</p>
         </div>
         <div className="showcase-area">
-          <img src={retail} alt="" />
-          <h2>Easy Online Returns</h2>
+          <img src={retail} alt="online-secure-payment-icon" />
+          <h2>Secure Online Experience</h2>
           <p>Send Within 30 Days</p>
         </div>
         <div className="showcase-area">
-          <img src={shipping} alt="" />
+          <img src={shipping} alt="free-shopping-icon" />
           <h2>Free Shipping</h2>
           <p>Delivery in 4 Days</p>
         </div>
@@ -32,29 +33,29 @@ const ShowCase = () => {
           <img src={discount} alt="" className="img-featured" />
         </div>
       </FlowerShow>
+      <Featured />
     </section>
   );
 };
 
 const FlowerShow = styled.div`
-  position: relative;
-  margin-top: 50px;
-  width: 1100px;
-  background: rgba(0, 0, 0.5);
-  opacity: 0.5;
-  img {
-    width: 100%;
+  .flower-show {
+    position: relative;
+    background: rgba(0, 0, 0, 0.6);
+    height: 30vh;
+    width: 40%;
+    opacity: 0.4;
+    display: flex;
   }
 
   .flower-position {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    background: red;
-    z-index: -1;
+    position: absolute;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  img {
+    width: 10%;
   }
 `;
 

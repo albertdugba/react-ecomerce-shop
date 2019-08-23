@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { FaLeaf } from "react-icons/fa";
+import { FaStoreAlt } from "react-icons/fa";
+import { FaCartPlus } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 
-import "../App.css";
+import "../../App.css";
 
 class Navbar extends Component {
   render() {
@@ -17,11 +20,16 @@ class Navbar extends Component {
 
           <ul>
             <li>
-              <Link to="/store">Store</Link>
+              <FaStoreAlt /> <Link to="/store">Store</Link>
             </li>
             ||
-            <li>Cart</li>||
-            <li>Login</li>
+            <li>
+              <FaCartPlus /> <Link to="/cart">Cart</Link>
+            </li>
+            ||
+            <li>
+              <FaUser /> <Link to="/account">Account</Link>
+            </li>
           </ul>
         </header>
       </nav>

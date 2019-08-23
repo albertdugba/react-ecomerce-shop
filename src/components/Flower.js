@@ -3,14 +3,15 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { FlowerConsumer } from "./Context";
 
-const Flower = ({ title, price, img, alt }) => {
+const Flower = ({ id, title, price, img, alt }) => {
   return (
     <CardContainer>
       <FlowerConsumer>
         {value => {
+          const { handleFlowersDetails } = value;
           return (
             <div>
-              <Link to="/details">
+              <Link to="/details" onClick={() => handleFlowersDetails(id)}>
                 <img
                   src={img}
                   alt={alt}
@@ -26,7 +27,10 @@ const Flower = ({ title, price, img, alt }) => {
               <div className="card-footer">
                 <p>{title}</p>
                 <span>${parseFloat(price).toFixed(2)}</span>
-                <button>View ></button>
+                <button onClick={() => console.log("Button clicked...")}>
+                  <Link to="/details" />
+                  View >
+                </button>
               </div>
             </div>
           );

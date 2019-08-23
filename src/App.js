@@ -1,19 +1,19 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Layout/Navbar";
 import Flowers from "./components/Flowers";
-import Banner from "./components/Banner";
-import Footer from "./components/Footer";
+import Banner from "./components/Layout/Banner";
+import Footer from "./components/Layout/Footer";
 import ShowCase from "./components/ShowCase/ShowCase";
 import Details from "./components/Details";
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="continer">
         <Navbar />
-        <Banner />
+        {/* <Banner /> */}
 
         <Switch>
           <Route exact path="/" component={ShowCase} />
