@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 import { FlowerConsumer } from "./Context";
-import Title from "./Title";
 
 const Details = () => {
   return (
@@ -11,14 +10,18 @@ const Details = () => {
         const { title, img, id, price, info } = value.flowerDetails;
         return (
           <div>
-            <Title name="Your" title="Cart" />
             <FlowerDetails>
               <img src={img} alt="" />
               <div className="flower-details">
-                <h1>{title}</h1>
+                <h1 style={{ fontSize: "3rem" }}>{title}</h1>
+                <p style={{ fontSize: "2rem", color: "teal" }}>
+                  ${parseFloat(price).toFixed(2)}
+                </p>
                 <p>{info}</p>
+                <span>{id}</span>
               </div>
             </FlowerDetails>
+            <div className="line" />
           </div>
         );
       }}
@@ -27,11 +30,15 @@ const Details = () => {
 };
 
 const FlowerDetails = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 900px;
+  margin: auto;
+  margin-top: 40px;
 
   img {
-    width: 340px;
-    height: 340px;
+    width: 200px;
+    height: 200px;
   }
 `;
 

@@ -23,14 +23,22 @@ const ShowCase = () => {
         </div>
         <div className="showcase-area">
           <img src={shipping} alt="free-shopping-icon" />
-          <h2>Free Shipping</h2>
+          <h2>Free Shipping Globally</h2>
           <p>Delivery in 4 Days</p>
         </div>
       </ShowCaseContainer>
 
-      <FlowerShow className="flower-show">
+      <FlowerShow>
+        <img
+          src={discount}
+          alt=""
+          className="img-featured"
+          style={{ marginTop: "60px" }}
+        />
         <div className="flower-position">
-          <img src={discount} alt="" className="img-featured" />
+          <p className="flower-position-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ut?
+          </p>
         </div>
       </FlowerShow>
       <Featured />
@@ -39,23 +47,31 @@ const ShowCase = () => {
 };
 
 const FlowerShow = styled.div`
-  .flower-show {
-    position: relative;
-    background: rgba(0, 0, 0, 0.6);
-    height: 30vh;
-    width: 40%;
-    opacity: 0.4;
-    display: flex;
-  }
+  max-width: 1100px;
+  margin: auto;
+  height: 85vh;
+  position: relative;
+  margin-top: 80px;
+  background: teal;
 
   .flower-position {
     position: absolute;
-    justify-content: center;
-    flex-direction: column;
-    padding: 1rem;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+
+    &-text {
+      z-index: -1;
+    }
   }
+
   img {
-    width: 10%;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
   }
 `;
 

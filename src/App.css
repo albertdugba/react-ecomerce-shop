@@ -42,6 +42,19 @@ li {
   margin: auto;
 }
 
+@media (max-width: 560px) {
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card img {
+    width: 120px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .banner {
   position: relative;
   background: rgba(0, 0, 0, 0.5);
@@ -73,4 +86,12 @@ li {
 .container {
   background: white;
   padding: 1rem;
+}
+
+/* Cart */
+.cart-col {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 35px;
+  border-bottom: 1.7px solid grey;
 }
