@@ -91,7 +91,7 @@ export const shopFlowers = [
 export const flowerDetails = {
   id: uuid(),
   title: "Flower-one",
-  img: "./img/product-1.jpg",
+  img: "./img/flower-01.jpg",
   price: 10,
   company: "Ohioma",
   info:
