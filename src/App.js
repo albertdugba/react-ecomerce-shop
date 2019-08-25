@@ -1,29 +1,20 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
-
-import Navbar from "./components/Layout/Navbar";
-import Flowers from "./components/Flowers";
-import Banner from "./components/Layout/Banner";
-import Footer from "./components/Layout/Footer";
-import ShowCase from "./components/ShowCase/ShowCase";
-import Details from "./components/Details";
-import Cart from "./components/Cart/Cart";
+import Navbar from "./Components/Layouts/Navbar";
+import ShopList from "./Components/ShopList";
+import { ProductProvider } from "./Components/Context";
 
 class App extends Component {
   render() {
     return (
-      <div className="container">
-        <Navbar />
-        {/* <Banner /> */}
-
-        <Switch>
-          <Route exact path="/" component={ShowCase} />
-          <Route exact path="/store" component={Flowers} />
-          <Route exact path="/details" component={Details} />
-          <Route exact path="/cart" component={Cart} />
-        </Switch>
-        {/* <Footer /> */}
-      </div>
+      <ProductProvider>
+        <React.Fragment>
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={ShopList} />
+          </Switch>
+        </React.Fragment>
+      </ProductProvider>
     );
   }
 }

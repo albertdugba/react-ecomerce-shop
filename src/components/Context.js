@@ -1,59 +1,20 @@
 import React, { Component } from "react";
+import { shopProducts } from "../Components/Data";
 
-import { shopFlowers, flowerDetails } from "../data/data";
-const FlowerContext = React.createContext();
+const ProductContext = React.createContext();
 
-export class FlowerProvider extends Component {
+export class ProductProvider extends Component {
   state = {
-    flowers: shopFlowers,
-    flowerDetails
+    products: shopProducts
   };
-
-  componentDidMount() {
-    this.setFlowers();
-  }
-
-  setFlowers = () => {
-    let newFlowers = [];
-    shopFlowers.forEach(item => {
-      let singleFlower = { ...item };
-      newFlowers.push(singleFlower);
-    });
-
-    this.setState(() => {
-      return {
-        flowers: newFlowers
-      };
-    });
-  };
-
-  getFlowers = id => {
-    const flower = this.state.flowers.find(item => item.id === id);
-    return flower;
-  };
-
-  handleFlowersDetails = id => {
-    const flowerDetails = this.getFlowers(id);
-    this.setState(() => {
-      return {
-        flowerDetails
-      };
-    });
-  };
-
   render() {
     const { children } = this.props;
     return (
-      <FlowerContext.Provider
-        value={{
-          ...this.state,
-          handleFlowersDetails: this.handleFlowersDetails
-        }}
-      >
+      <ProductContext.Provider value={{ ...this.state }}>
         {children}
-      </FlowerContext.Provider>
+      </ProductContext.Provider>
     );
   }
 }
 
-export const FlowerConsumer = FlowerContext.Consumer;
+export const ProductConsumer = ProductContext.Consumer;
