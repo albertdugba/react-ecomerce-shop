@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
+
+import { ProductProvider } from "./Components/Context";
 import Navbar from "./Components/Layouts/Navbar";
 import ShopList from "./Components/ShopList";
-import { ProductProvider } from "./Components/Context";
+import Footer from "./Components/Layouts/Footer";
 
 class App extends Component {
   render() {
@@ -13,6 +15,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={ShopList} />
           </Switch>
+          <Footer />
         </React.Fragment>
       </ProductProvider>
     );
