@@ -12,7 +12,7 @@ const Product = ({ id, img, name, price }) => {
 
 const ProductContainer = styled.div`
   background: #fff;
-  border: 1px solid brown;
+  /* border: 1px solid brown; */
 
   img {
     width: 230px;

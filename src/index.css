@@ -2,5 +2,7 @@ body {
   font-family: "Livvic", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* max-width: 1000px;
+  margin: auto; */
   /* background: grey; */
 }

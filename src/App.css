@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+li {
+  list-style: none;
+}
+
+/* Colors */
+:root {
+  --bannerBgColor: rgb(170, 89, 8);
+  --brandColor: rgb(170, 89, 8);
+  --titleColor: rgb(121, 63, 5);
+}
