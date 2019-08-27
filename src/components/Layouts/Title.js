@@ -14,6 +14,11 @@ const Title = ({ name, title }) => {
 const TitleHeader = styled.div`
   text-align: center;
   margin-top: 35px;
+  padding: 1rem;
+
+  span {
+    color: var(--titleColor);
+  }
 `;
 
 export default Title;

@@ -9,20 +9,22 @@ const Navbar = () => {
     <header>
       <NavBar className="navbar">
         <div className="logo">
-          <FaShoppingBag />
+          <Link to="/">
+            <FaShoppingBag />
+          </Link>
         </div>
         <ul>
           <li>
-            | <Link to="/">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            || <Link to="/shop">Shop</Link>
+            <Link to="/shop">Shop</Link>
           </li>
           <li>
-            || <Link to="/cart">My Cart</Link>
+            <Link to="/cart">My Cart</Link>
           </li>
           <li>
-            || <Link to="/account">My Account</Link>
+            <Link to="/account">My Account</Link>
           </li>
         </ul>
       </NavBar>

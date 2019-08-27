@@ -2,22 +2,21 @@ import React from "react";
 import styled from "styled-components";
 
 import { ProductConsumer } from "./Context";
-import Product from "./Product";
-import Banner from "./Layouts/Banner";
+import ProductItem from "./ProductItem";
+// import Banner from "./Layouts/Banner";
 import Title from "./Layouts/Title";
 
 const ShopList = () => {
   return (
     <div>
-      <Banner />
+      {/* <Banner /> */}
       <Title name="Our" title="Products" />
       <ProductCard className="product-card">
         <ProductConsumer>
           {value => {
             const { products } = value;
-            console.log(products);
             return products.map(product => (
-              <Product key={product.id} {...product} />
+              <ProductItem key={product.id} {...product} />
             ));
           }}
         </ProductConsumer>
