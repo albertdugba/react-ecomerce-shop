@@ -1,21 +1,24 @@
 import React from "react";
-import styled from "styled-components";
 import { FaExclamationTriangle } from "react-icons/fa";
+import styled from "styled-components";
 
 const NotFound = () => {
   return (
     <FooterContainer>
       <p>
-        <FaExclamationTriangle />
+        <FaExclamationTriangle style={{ color: "red", fontSize: "3.5rem" }} />
       </p>
-      <p>Sorry the page you're loking for doesn't exist</p>
+      <p style={{ fontSize: "2rem" }}>
+        Ooops!😞, Sorry the page you're looking for doesn't exist
+      </p>
     </FooterContainer>
   );
 };
 
 const FooterContainer = styled.div`
   max-width: 1000px;
-  margin: auto;
+  margin: 25px auto;
+  text-align: center;
 `;
 
 export default NotFound;
