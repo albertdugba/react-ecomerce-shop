@@ -3,13 +3,11 @@ import styled from "styled-components";
 
 import { ProductConsumer } from "./Context";
 import ProductItem from "./ProductItem";
-// import Banner from "./Layouts/Banner";
 import Title from "./Layouts/Title";
 
 const ShopList = () => {
   return (
     <div>
-      {/* <Banner /> */}
       <Title />
       <ProductCard className="product-card">
         <ProductConsumer>

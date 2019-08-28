@@ -8,7 +8,7 @@ class ProductDetails extends Component {
   };
 
   componentDidMount() {
-    // I want to select the select product and update the state
+    // I want to select the selected product and update the state
   }
 
   render() {

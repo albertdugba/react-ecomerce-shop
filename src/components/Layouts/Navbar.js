@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaShoppingBag } from "react-icons/fa";
 import styled from "styled-components";
+
 import "../../App.css";
 
 const Navbar = () => {
@@ -24,7 +25,7 @@ const Navbar = () => {
             <Link to="/cart">My Cart</Link>
           </li>
           <li>
-            <Link to="/account">My Account</Link>
+            <Link to="/account-signin">My Account</Link>
           </li>
         </ul>
       </NavBar>
