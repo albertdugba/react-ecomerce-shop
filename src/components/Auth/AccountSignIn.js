@@ -10,6 +10,7 @@ class AccountSignIn extends Component {
           <span>
             <FaLock />
           </span>{" "}
+          Account Log In
         </p>
 
         <form></form>
