@@ -4,7 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import "./App.css";
 import { ProductProvider } from "./Components/Context";
 import Navbar from "./Components/Layouts/Navbar";
-import Banner from "./Components/Layouts/Banner";
+// import Banner from "./Components/Layouts/Banner";
 import ShopList from "./Components/ShopList";
 import ProductDetails from "./Components/ProductDetails";
 import HomePage from "./Components/Layouts/HomePage";

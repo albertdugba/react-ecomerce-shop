@@ -10,7 +10,7 @@ const ShopList = () => {
   return (
     <div>
       {/* <Banner /> */}
-      <Title name="Our" title="Products" />
+      <Title />
       <ProductCard className="product-card">
         <ProductConsumer>
           {value => {
@@ -23,6 +23,11 @@ const ShopList = () => {
       </ProductCard>
     </div>
   );
+};
+
+Title.defaultProps = {
+  name: "Our",
+  title: "Products"
 };
 
 const ProductCard = styled.div`

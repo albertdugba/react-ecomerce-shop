@@ -9,7 +9,11 @@ const NotFound = () => {
         <FaExclamationTriangle style={{ color: "red", fontSize: "3.5rem" }} />
       </p>
       <p style={{ fontSize: "2rem" }}>
-        Ooops!😞, Sorry the page you're looking for doesn't exist
+        Ooops{" "}
+        <span role="img" aria-label="sad">
+          😞
+        </span>
+        , Sorry the page you're looking for doesn't exist
       </p>
     </FooterContainer>
   );
