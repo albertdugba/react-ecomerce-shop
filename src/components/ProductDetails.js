@@ -1,31 +1,26 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+
 import { ProductConsumer } from "./Context";
 
 class ProductDetails extends Component {
-  state = {
-    selectedProduct: []
-  };
-
-  componentDidMount() {
-    // I want to select the selected product and update the state
-  }
-
   render() {
     return (
       <ProductPage>
         <ProductConsumer>
           {value => {
-            return (
-              <h1>Selected Product Page ID: {this.props.match.params.id}</h1>
-            );
+            const { products } = value;
+            products.find(product => {
+              if (product.id === this.props.match.params.id) {
+                return <div className="page">{console.log(product.name)}</div>;
+              }
+            });
           }}
         </ProductConsumer>
       </ProductPage>
     );
   }
 }
-
 const ProductPage = styled.div`
   max-width: 1000px;
   margin: 30px auto;

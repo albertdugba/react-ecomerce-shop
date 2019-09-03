@@ -1,35 +1,33 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+import { shopProducts } from "./Data";
 import { ProductConsumer } from "./Context";
 
-const ProductItem = ({ id, img, name, price }) => {
-  return (
-    <ProductConsumer>
-      {value => {
-        return (
-          <ProductContainer>
-            <Link to={`details/${id}`}>
-              <img
-                src={img}
-                alt={name}
-                onClick={() => value.handleProductDetails(id)}
-                // This onClick events gets called from the context api
-              />
-            </Link>
-
-            <p>{name}</p>
-            <p>GHC {parseFloat(price).toFixed(2)}</p>
-            <Link to={`details/${id}`}>
-              <button>View Item ></button>
-            </Link>
-          </ProductContainer>
-        );
-      }}
-    </ProductConsumer>
-  );
-};
+class ProductItem extends Component {
+  render() {
+    const { id, img, name, price } = this.props;
+    return (
+      <ProductConsumer>
+        {value => {
+          return (
+            <ProductContainer>
+              <Link to={`details/${id}`}>
+                <img src={img} alt={name} />
+              </Link>
+              <p>{name}</p>
+              <p>GHC {parseFloat(price).toFixed(2)}</p>
+              <Link to={`details/${id}`}>
+                <button>View Item ></button>
+              </Link>
+            </ProductContainer>
+          );
+        }}
+      </ProductConsumer>
+    );
+  }
+}
 
 const ProductContainer = styled.div`
   background: #fff;
